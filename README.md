@@ -1,85 +1,180 @@
-Why use NumPy
-Python lists are flexible but slow for numerical computing because they:
+NumPy is a powerful Python library used for:
+- numerical computing
+- arrays
+- matrix operations
+- mathematical calculations
+- AI and Machine Learning
 
-Store elements as pointers instead of a continuous block of memory.
-Lack vectorized operations, relying on loops instead.
-Have significant overhead due to dynamic typing.
-NumPy's Superpowers:
-Faster than Python lists (C-optimized backend)
-Uses less memory (efficient storage)
-Supports vectorized operations (no explicit loops needed)
-Has built-in mathematical functions
-NumPy vs. Python Lists – Performance Test
-Let's compare Python lists with NumPy arrays using a simple example.
+---
 
-Example 1: Adding Two Lists vs. NumPy Arrays
+# Why NumPy?
+
+NumPy is:
+- faster than Python lists
+- memory efficient
+- widely used in AI/ML
+- foundation of Pandas, TensorFlow, PyTorch
+
+---
+
+# Installation
+
+```bash
+pip install numpy
+````
+
+---
+
+# Import NumPy
+
+```python
 import numpy as np
-import time
- 
-# Python list
-size = 1_000_000
-list1 = list(range(size))
-list2 = list(range(size))
- 
-start = time.time()
-result = [x + y for x, y in zip(list1, list2)]
-end = time.time()
-print("Python list addition time:", end - start)
- 
-# NumPy array
-arr1 = np.array(list1)
-arr2 = np.array(list2)
- 
-start = time.time()
-result = arr1 + arr2  # Vectorized operation
-end = time.time()
-print("NumPy array addition time:", end - start)
+```
 
-Key Takeaway: NumPy is significantly faster because it performs operations in C, avoiding Python loops.
+---
 
-Creating NumPy Arrays
+# Creating Arrays
+
+```python
 import numpy as np
- 
-# Creating a 1D NumPy array
-arr1 = np.array([1, 2, 3, 4, 5])
-print(arr1)
- 
-# Creating a 2D NumPy array
-arr2 = np.array([[1, 2, 3], [4, 5, 6]])
-print(arr2)
- 
-# Checking type and shape
-print("Type:", type(arr1))
-print("Shape:", arr2.shape)
 
-🔹 NumPy stores data in a contiguous memory block, making access faster than lists.🔹 shape shows the dimensions of an array.
+arr = np.array([1,2,3,4])
 
-Memory Efficiency – NumPy vs. Lists
-Let's check memory consumption.
+print(arr)
+```
 
-import sys
- 
-list_data = list(range(1000))
-numpy_data = np.array(list_data)
- 
-print("Python list size:", sys.getsizeof(list_data) * len(list_data), "bytes")
-print("NumPy array size:", numpy_data.nbytes, "bytes")
+---
 
-NumPy arrays use significantly less memory compared to Python lists.
+# Array Operations
 
-Vectorization – No More Loops!
-NumPy avoids loops by applying operations to entire arrays at once using SIMD (Single Instruction, Multiple Data) and other low-level optimizations. SIMD is a CPU-level optimization provided by modern processors.
+```python
+import numpy as np
 
-Example 2: Squaring Elements
-# Python list (loop-based)
-list_squares = [x ** 2 for x in list1]
- 
-# NumPy (vectorized)
-numpy_squares = arr1 ** 2
+arr = np.array([1,2,3])
 
-NumPy is cleaner and faster!
-Summary
-NumPy is faster than Python lists because it is optimized in C.
-It consumes less memory due to efficient storage.
-It provides vectorized operations, removing the need for slow loops.
-Essential for data science and machine learning workflows.
+print(arr + 2)
+print(arr * 2)
+```
+
+---
+
+# Array Attributes
+
+```python
+print(arr.shape)
+print(arr.ndim)
+print(arr.size)
+```
+
+---
+
+# Indexing & Slicing
+
+```python
+print(arr[0])
+print(arr[1:3])
+```
+
+---
+
+# Reshape Array
+
+```python
+arr = np.array([1,2,3,4])
+
+print(arr.reshape(2,2))
+```
+
+---
+
+# Common NumPy Functions
+
+| Function        | Use                  |
+| --------------- | -------------------- |
+| `np.array()`    | create array         |
+| `np.zeros()`    | array of zeros       |
+| `np.ones()`     | array of ones        |
+| `np.arange()`   | range array          |
+| `np.linspace()` | evenly spaced values |
+| `np.mean()`     | average              |
+| `np.sum()`      | total sum            |
+| `np.max()`      | maximum value        |
+| `np.min()`      | minimum value        |
+
+---
+
+# Example
+
+```python
+import numpy as np
+
+arr = np.array([1,2,3,4,5])
+
+print(np.sum(arr))
+print(np.mean(arr))
+print(np.max(arr))
+```
+
+---
+
+# Matrix Operations
+
+```python
+import numpy as np
+
+a = np.array([[1,2],[3,4]])
+b = np.array([[5,6],[7,8]])
+
+print(a + b)
+print(np.dot(a,b))
+```
+
+---
+
+# Random Numbers
+
+```python
+import numpy as np
+
+print(np.random.rand(3))
+```
+
+---
+
+# Why NumPy is Important for AI?
+
+NumPy is used in:
+
+* Machine Learning
+* Deep Learning
+* Data Science
+* Computer Vision
+* AI Engineering
+* LLM pipelines
+
+Libraries like:
+
+* Pandas
+* TensorFlow
+* PyTorch
+* Scikit-learn
+
+are built heavily on NumPy.
+
+---
+
+# Learning Roadmap
+
+1. Arrays
+2. Indexing
+3. Slicing
+4. Reshape
+5. Matrix Operations
+6. Statistics Functions
+7. Broadcasting
+8. Random Module
+
+
+
+```
+```
