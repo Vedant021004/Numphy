@@ -51,4 +51,23 @@ brr = np.array([0.1,0.2,0.3,0.4], dtype = int)
 print(brr.dtype)
 print(brr)
 
+# Broadcasting: 10 is added to all elements
+arr = np.array([1, 2, 3, 4, 5])
+result = arr + 10  
+print(result)  # Output: [11 12 13 14 15]
 
+# Simulating a dataset (5 samples, 3 features)
+data = np.array([[10, 20, 30],
+                 [15, 25, 35],
+                 [20, 30, 40],
+                 [25, 35, 45],
+                 [30, 40, 50]])
+
+# Calculating mean and standard deviation for each feature (column)
+mean = data.mean(axis=0)
+std = data.std(axis=0)
+
+# Normalizing the data using broadcasting
+normalized_data = (data - mean) / std
+
+print(normalized_data)
