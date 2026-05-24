@@ -25,5 +25,19 @@ matrix = np.array([[[1,2,3],[4,5,6]]
 
 # print(matrix.shape)
 
-matrix [1,:] = 0
-print(matrix)
+# matrix [1,:] = 0
+# print(matrix)
+
+first_col = matrix[:, 0]
+flat2 = first_col.flatten()
+print(flat2)
+
+first_row = matrix[0, :]
+flat1 = first_row.flatten()
+print(flat1)
+
+# Get the first row from each "sheet" in a 3D array
+first_rows = matrix[:, 0, :]
+flat = first_rows.flatten()
+print(flat)
+
