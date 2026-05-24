@@ -41,3 +41,14 @@ first_rows = matrix[:, 0, :]
 flat = first_rows.flatten()
 print(flat)
 
+
+# changing the datatype of the array
+arr = np.array([1.1,2.2,3.3,4.4])
+print(arr.dtype)
+print(arr.astype(int))
+
+brr = np.array([0.1,0.2,0.3,0.4], dtype = int)
+print(brr.dtype)
+print(brr)
+
+
