@@ -43,22 +43,36 @@
 
 
 
-def calcate(*args):
-    total = 0
+# def calcate(*args):
+#     total = 0
+#     for i in args:
+#         total = total + i
+        
+#     return total
+        
+# print(calcate(1,2,3,4,5,6,7,8,9))
+# print(calcate(1,2,3))
+# print(calcate(1,2))
+# print(calcate(1))
+
+
+# # Create a function using **kwargs Print all student details.
+# def pra(**kwargs):
+#     for k , v in kwargs.items():
+#         print(f"{k} = {v}")
+
+# pra(name = "vedant", age = 21, course = "python")
+
+
+
+
+# Create a function using both *args and **kwargs
+def mojmasti(*args,**kwargs):
     for i in args:
-        total = total + i
-        
-    return total
-        
-print(calcate(1,2,3,4,5,6,7,8,9))
-print(calcate(1,2,3))
-print(calcate(1,2))
-print(calcate(1))
-
-
-# Create a function using **kwargs Print all student details.
-def pra(**kwargs):
+        print(i)
     for k , v in kwargs.items():
         print(f"{k} = {v}")
 
-pra(name = "vedant", age = 21, course = "python")
+        
+mojmasti(1,2,3,4,5, name = "vedant", age = 21, course = "python")
+       

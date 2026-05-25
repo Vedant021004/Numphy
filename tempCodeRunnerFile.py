@@ -1,5 +1,8 @@
-def pra(**kwargs):
-    for k , v in kwargs.items():
-        print(f"{k} = {v}")
+def fun1():
+#     print("hello bhai")
+# def fun2():
+#     print("hello bhai ji")
 
-pra(name = "vedant", age = 21, course = "python")
+# fun_list = [fun1,fun2]
+# for func in fun_list:
+#     func()
