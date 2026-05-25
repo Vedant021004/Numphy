@@ -18,25 +18,47 @@
 # print(naam())
 
 # Create a function using keyword arguments.
-def student_info(**kwargs):
-    for key, value in kwargs.items():
-        print(f"{key}: {value}")
+# def student_info(**kwargs):
+#     for key, value in kwargs.items():
+#         print(f"{key}: {value}")
 
-# Calling the function with keyword arguments
-student_info(name="Rahul", age=21, roll_no = 122, course="Python")
-
-
-def greet(greeting, **kwargs):
-    print(greeting)
-    for key, value in kwargs.items():
-        print(f"{key} = {value}")
-
-greet("Hello", name="Amit", city="Mumbai")
+# # Calling the function with keyword arguments
+# student_info(name="Rahul", age=21, roll_no = 122, course="Python")
 
 
-def hum(vedrid , **kwargs):
-    print(vedrid)
-    for k, c in kwargs.items():
-        print(f"{k} = {c}")
+# def greet(greeting, **kwargs):
+#     print(greeting)
+#     for key, value in kwargs.items():
+#         print(f"{key} = {value}")
 
-hum("vedant", name ="vedant", rollno = 36, age = 21, course = "python")        
+# greet("Hello", name="Amit", city="Mumbai")
+
+
+# def hum(vedrid , **kwargs):
+#     print(vedrid)
+#     for k, c in kwargs.items():
+#         print(f"{k} = {c}")
+
+# hum("vedant", name ="vedant", rollno = 36, age = 21, course = "python")
+
+
+
+def calcate(*args):
+    total = 0
+    for i in args:
+        total = total + i
+        
+    return total
+        
+print(calcate(1,2,3,4,5,6,7,8,9))
+print(calcate(1,2,3))
+print(calcate(1,2))
+print(calcate(1))
+
+
+# Create a function using **kwargs Print all student details.
+def pra(**kwargs):
+    for k , v in kwargs.items():
+        print(f"{k} = {v}")
+
+pra(name = "vedant", age = 21, course = "python")

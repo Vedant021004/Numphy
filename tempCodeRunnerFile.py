@@ -1,6 +1,5 @@
-def hum(vedrid , **kwargs):
-    print(vedrid)
-    for k, c in kwargs.items():
-        print(f"{k} = {c}")
+def pra(**kwargs):
+    for k , v in kwargs.items():
+        print(f"{k} = {v}")
 
-hum("vedant", name ="vedant", rollno = 36, age = 21, course = "python")
+pra(name = "vedant", age = 21, course = "python")
