@@ -41,4 +41,14 @@
 
 list = [1,2,3,5,6,7,8,9,10] 
 print(list)
+user = [x for x in list if x%2==0]
+print(user)
+
+
+# Create a function that finds the largest among 3 numbers.
+def largest(a,b,c):
+    print(max(a,b,c))
+
+largest(1,2,3)
+
 
