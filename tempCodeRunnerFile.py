@@ -1,10 +1,6 @@
-def largest(a,b,c):
-    a = max
-    if b>a:
-        a = b
-        print(b)
-    if c>a:
-        a = c
-        print(c)
-    return a
-largest(1,2,3)
+def hum(vedrid , **kwargs):
+    print(vedrid)
+    for k, c in kwargs.items():
+        print(f"{k} = {c}")
+
+hum("vedant", name ="vedant", rollno = 36, age = 21, course = "python")
