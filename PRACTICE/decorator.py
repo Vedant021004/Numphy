@@ -1,21 +1,48 @@
 
-import exper as exp
+# import exper as exp
 
-def change(puuchi):
+# def change(puuchi):
+#     def wrapper():
+#         print("01")
+#         puuchi()
+#     return wrapper
+
+# @change
+# def printer():
+#     print("employee")
+
+# printer()
+# @change
+# def trip():
+#    print("hima")
+
+# trip()
+
+
+def decor(add):
+
     def wrapper():
-        print("01")
-        puuchi()
+
+        result = add()
+
+        num3 = int(input("Enter third number: "))
+
+        result = result + num3
+
+        return result
+
     return wrapper
 
-@change
-def printer():
-    print("employee")
 
-printer()
-@change
-def trip():
-   print("hima")
+@decor
+def add():
 
-trip()
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+
+    result = num1 + num2
+
+    return result
 
 
+print("Answer is :", add())
