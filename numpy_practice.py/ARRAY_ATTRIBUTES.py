@@ -7,4 +7,10 @@ arr11 = np.array([[1,2,3],[5,6,7]])
 print(arr11.shape)
 
 # Find dimensions of array.
-mwaah
+mwaah = np.array([[[1,2,4],[1,2,3],[1,2,3]]])
+print(mwaah)
+print(mwaah.ndim)
+print(mwaah.shape)
+print(mwaah.size)
+print(mwaah.itemsize)
+print(mwaah.nbytes)
