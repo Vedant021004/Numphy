@@ -1,6 +1,8 @@
-def add():
-    num1 = int(input("Enter first number: "))
-    num2 = int(input("Enter second number: "))
-    result = num1 + num2
-    return num1 + num2
-print("answer is :", add())
+x = y+z
+y = z+x
+def calculator():
+        return 5,25,30
+x, y, z = calculator()
+print(x)
+print(y)
+print(z)

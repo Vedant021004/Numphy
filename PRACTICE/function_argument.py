@@ -17,7 +17,10 @@
 
 # print(naam())
 
+
+
 # Create a function using keyword arguments.
+
 # def student_info(**kwargs):
 #     for key, value in kwargs.items():
 #         print(f"{key}: {value}")

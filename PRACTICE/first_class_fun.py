@@ -38,19 +38,71 @@
 # for func in fun_list:
 #     func()
 
-def check_balance():
-    # In a real app, this would check a database or variable
-    print("\n💰 Your current balance is: $100.00")
+# def check_balance():
+#     # In a real app, this would check a database or variable
+#     print("\n💰 Your current balance is: $100.00")
 
-def deposit_money():
-    amount = input("\n💵 Enter amount to deposit: ")
-    print(f"✅ Successfully deposited ${amount}.")
+# def deposit_money():
+#     amount = input("\n💵 Enter amount to deposit: ")
+#     print(f"✅ Successfully deposited ${amount}.")
 
-def withdraw_money():
-    amount = input("\n🏧 Enter amount to withdraw: ")
-    print(f"✅ Successfully withdrew ${amount}.")
+# def withdraw_money():
+#     amount = input("\n🏧 Enter amount to withdraw: ")
+#     print(f"✅ Successfully withdrew ${amount}.")
 
-def exit_system():
-    print("\n👋 Thank you for using our system. Goodbye!")
-    # Returning False will tell our main loop to stop running
-    return False
+# def exit_system():
+#     print("\n👋 Thank you for using our system. Goodbye!")
+#     # Returning False will tell our main loop to stop running
+#     return False
+
+
+# 1
+def call(name):
+    
+    print("mera naam ",name)
+
+call1 = call 
+call1("vedant")     
+
+# 2
+def argument(type):
+    print(type)
+def passe(fun,value):
+    return fun(value)
+    
+print(passe(argument,"jaanu"))
+
+# 3
+
+def first():
+    print("main pehla hoon ji")
+def second():
+    print("main doosra hoon ji")
+def third():
+    print("main third hoon ji")
+
+fun = [first(), second(), third()]
+for i in fun:
+    print(fun())   
+
+
+
+# Assign one function to multiple variables
+def get_coordinates():
+    # Returns a tuple behind the scenes
+    return 10, 25, 50
+
+# Assign to multiple variables by unpacking
+x, y, z = get_coordinates()
+
+print(x) # Output: 10
+print(y) # Output: 25
+print(z)
+    
+##---##
+def calculator():
+        return 5,25,30
+x, y, z = calculator()
+print(x)
+print(y)
+print(z)
