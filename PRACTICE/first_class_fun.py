@@ -106,3 +106,23 @@ x, y, z = calculator()
 print(x)
 print(y)
 print(z)
+
+# Create a function named hello. Store it in variable x. Call x.
+def hello():
+    print("hyyy")
+
+x = hello
+x()
+
+# create two functions add and subtract
+def add(x,y):
+    # print("the sum of the two numbers:",x+y)
+    return x+y
+def subtract(x,y):
+    # print("the diff of the two numbers:", x-y)
+    return x-y
+    
+a = add(3,4)
+b = subtract(8,4)
+print(a)
+print(b)
